@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--  
+    ! CSS 파일은 <head> 태그 내부에, JavaScript 파일은 <body> 태그의 가장 아래에 위치 권장
+
+
+    ? CSS 파일을 <head> 태그에 위치시키는 이유
+
+    - 페이지 렌더링 속도
+    웹 브라우저는 HTML을 위에서 아래로 읽으면서 문서를 파싱
+    : <head>에 CSS를 위치시키면, 브라우저가 HTML 문서의 구조를 읽는 동시에 스타일을 미리 로드하고 적용 가능
+    >> 렌더링 과정에서 스타일이 빠르게 적용되어 사용자가 스타일이 적용되지 않은 "깜빡임" 현상 없이 페이지를 볼 수 있음
+
+    - 우선 순위 및 의존성
+    : HTML 문서의 모양과 레이아웃을 초기에 정의함으로써, 문서의 콘텐츠가 로드되기 전에 페이지의 기본적인 외관이 설정
+    >> 이렇게 함으로써 문서가 사용자에게 표시되기 전에 시각적 요소가 준비, 레이아웃 이동이 최소화
+
+    ? JavaScript 파일을 <body> 태그의 가장 아래에 위치시키는 이유
+
+    - 페이지 로드 성능
+    : JavaScript는 HTML 요소와 상호 작용하거나 DOM을 조작 가능, 문서의 모든 HTML 요소가 로드되고 파싱된 후에 JavaScript가 실행되어야 함.
+    >> JavaScript가 <head>에 위치하면, 스크립트 로딩 및 실행으로 인해 HTML의 나머지 부분이 로드되는 것이 지연 가능
+
+    - 사용자 경험 개선
+    JavaScript 파일을 문서 하단에 위치시키면, HTML과 CSS가 먼저 로드되어 사용자가 페이지의 콘텐츠를 더 빠르게 확인 가능
+    >> 네트워크 속도가 느린 환경에서 페이지의 콘텐츠를 빠르게 볼 수 있게 해서 사용자 경험을 향상
+  -->
+  
+  <!-- 
+    !웹 문서에 자바스크립트 파일 연결
+    : 닫히는 body태그 위에 적용
+    script 태그의 src 속성 (파일 경로 지정)
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
